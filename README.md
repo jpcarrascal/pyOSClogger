@@ -23,5 +23,7 @@ Sample output file contents:
 30-07-16 00-25-36.826683	/word	yet another string
 ```
 
+A Puredata patch is included for testing purposes. Requires Puredata Extended (http://puredata.info/downloads/pd-extended)
+
 To do:
 - Get rid of global variables
