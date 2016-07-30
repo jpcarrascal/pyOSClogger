@@ -5,7 +5,7 @@ from pythonosc import osc_server
 def start(addr, *stuff):
     global f, recording
     if recording == False:
-        timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%d-%m-%y_%H-%M-%S')
+        timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d_%H-%M-%S')
         basename = str(stuff[0])
         filename = basename+"_"+timestamp+".txt"
         f = open(filename, 'w')
@@ -24,8 +24,8 @@ def stop(addr, *stuff):
 
 def recordData(addr, *stuff):
     global f, recording
-    if recording == True and addr != "/start":
-        toString = datetime.datetime.fromtimestamp(time.time()).strftime('%d-%m-%y %H-%M-%S.%f')
+    if recording == True and addr != "/start" and addr != "/stop":
+        toString = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H-%M-%S.%f')
         toString = toString + "\t" + addr
         toString = toString + "\t" + "\t".join(map(str, stuff))
         toString.strip()
