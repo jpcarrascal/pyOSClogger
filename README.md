@@ -1,11 +1,11 @@
 # pyOSClogger
 A simple Python OSC logger.
 
-pyOSClogger would save all OSC messages received on the designated OSC port to a tab-separated text file .
-Only two messages are not logged as they are used to control the logger:
+pyOSClogger would save all OSC messages received on the designated OSC port to a tab-separated text file.
+Only two messages are not logged as they are used for controlling the logger:
 
 - /start <filename> would start logging OSC messages to a file called <filename>_<timestamp>.txt
-  <timestamp> format is yyyy-mm-dd_hh-mm-ss
+  were <timestamp> format is yyyy-mm-dd_hh-mm-ss
 - /stop would cease logging and save the file.
 
 Every message is timestamped with the current time, with microseconds resolution.
@@ -22,6 +22,8 @@ Sample output file contents:
 30-07-16 00-25-36.825849	/acc	0.55	0.09	0.0
 30-07-16 00-25-36.826683	/word	yet another string
 ```
+
+Requires Python 3.x (tested on 3.5) and python-osc (https://pypi.python.org/pypi/python-osc).
 
 A Puredata patch is included for testing purposes. Requires Puredata Extended (http://puredata.info/downloads/pd-extended)
 
