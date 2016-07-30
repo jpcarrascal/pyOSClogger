@@ -11,7 +11,8 @@ Only two messages are not logged as they are used to control the logger:
 Every message is timestamped with the current time, with microseconds resolution.
 
 Sample output file contents:
-'''
+
+```
 30-07-16 00-25-34.826176	/acc	0.34	0.17	0.4
 30-07-16 00-25-35.325870	/acc	0.1	0.32	0.91
 30-07-16 00-25-35.826011	/acc	1	0.2	10
@@ -20,4 +21,4 @@ Sample output file contents:
 30-07-16 00-25-36.326541	/word	anotherstring
 30-07-16 00-25-36.825849	/acc	0.55	0.09	0.0
 30-07-16 00-25-36.826683	/word	yetanotherstring
-'''
+```
